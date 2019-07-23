@@ -1,4 +1,8 @@
 [id=about]
+
+image:https://semaphoreci.com/api/v1/smallrye/smallrye-maven-plugin/branches/master/badge.svg["Semaphore CI", link="https://semaphoreci.com/smallrye/smallrye-maven-plugin"]
+image:https://img.shields.io/github/license/smallrye/smallrye-maven-plugin.svg["License", link="http://www.apache.org/licenses/LICENSE-2.0"]
+
 = SmallRye Maven Plugin
 
 == About
