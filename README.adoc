@@ -1,0 +1,77 @@
+[id=about]
+= SmallRye Maven Plugin
+
+== About
+
+The SmallRye Maven Plugin is a project which aims to provide some automation that
+can be utilized by SmallRye implementation projects in order to perform common
+tasks.
+
+== Features
+
+=== Goal: `generate-info`
+
+The `generate-info` goal generates a class in the base package of your project which
+gives version information about that project.  The following configuration parameters
+are supported:
+
+* `specVersion` (required) - The specification version being implemented
+by this project.  In many cases you can directly set this to the value of the property
+containing the MicroProfile/Jakarta/etc. spec artifact version.
+* `implementationVersion` (required, defaults to `${project.version}`) - The implementation
+version.
+* `packageName` (required) - The name of the base package into which the class should be generated.
+Typically this is something like `io.smallrye.projectname`.
+* `className` (required, defaults to `SmallRyeInfo`) - The name of the class to generate.  Normally
+this should be left to the default value.
+* `sourceOutput` (required, defaults to `${project.build.directory}/generated-sources/smallrye-info`) -
+This property determines where the generated sources are written.  The directory named by this
+property will automatically be added to the project as a source root.
+
+== Usage
+
+This plugin is intended to be consumed by SmallRye projects (not end user programs).
+
+To include the plugin in a project, add the following plugin definition to the project POM:
+
+.POM snippet
+[source,xml]
+<plugin>
+    <groupId>io.smallrye</groupId>
+    <artifactId>smallrye-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <!-- add each goal here -->
+            </goals>
+        <execution>
+    </executions>
+    <configuration>
+        <!-- add each configuration item here -->
+    </configuration>
+</plugin>
+
+See above for information about the available goals and their configuration parameters.
+
+The SmallRye parent POM (https://github.com/smallrye/smallrye-parent) should normally be inherited,
+which will configure the correct version of this plugin.
+
+=== Example
+
+.POM example
+[source,xml]
+<plugin>
+    <groupId>io.smallrye</groupId>
+    <artifactId>smallrye-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>generate-info</goal>
+            </goals>
+        <execution>
+    </executions>
+    <configuration>
+        <packageName>io.smallrye.projectname</packageName>
+        <specVersion>${version.eclipse.microprofile.projectname}</specVersion>
+    </configuration>
+</plugin>
