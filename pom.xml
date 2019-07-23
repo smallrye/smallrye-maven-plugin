@@ -16,6 +16,20 @@
         <version>8</version>
     </parent>
 
+    <scm>
+        <connection>scm:git:git@github.com:smallrye/smallrye-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:smallrye/smallrye-maven-plugin.git</developerConnection>
+        <url>https://github.com/smallrye/smallrye-maven-plugin/</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
     <properties>
         <version.org.apache.maven.maven-plugin>2.2.1</version.org.apache.maven.maven-plugin>
         <version.org.apache.maven.maven-settings>3.6.1</version.org.apache.maven.maven-settings>
