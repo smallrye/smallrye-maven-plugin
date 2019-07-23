@@ -5,7 +5,7 @@
     <name>SmallRye Maven Plugin</name>
     <description>A plugin to generate common SmallRye functionality</description>
     <artifactId>smallrye-maven-plugin</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <parent>
@@ -18,7 +18,7 @@
         <connection>scm:git:git@github.com:smallrye/smallrye-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:smallrye/smallrye-maven-plugin.git</developerConnection>
         <url>https://github.com/smallrye/smallrye-maven-plugin/</url>
-        <tag>smallrye-maven-plugin-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <licenses>
