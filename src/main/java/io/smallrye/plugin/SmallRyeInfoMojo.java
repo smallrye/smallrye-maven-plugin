@@ -137,6 +137,13 @@ public class SmallRyeInfoMojo extends AbstractMojo {
                 .inlineDocTag("code", "false").text(" otherwise");
         method.body()._return(implSnapshot ? JExpr.TRUE : JExpr.FALSE);
 
+        // version of the info tool itself
+
+        method = classDef.method(JMod.PUBLIC | JMod.STATIC, int.class, "getInfoVersion");
+        method.docComment().text("Get the SmallRye information class API version.  Use this property to"
+            + " determine what methods are available on this class.")._return().text("the version");
+        method.body()._return(JExprs.decimal(1));
+
         try {
             sources.writeSources();
         } catch (IOException e) {
