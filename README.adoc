@@ -1,6 +1,6 @@
 :ci: https://github.com/smallrye/smallrye-maven-plugin/actions?query=workflow%3A%22SmallRye+Build%22
 
-image:https://github.com/smallrye/smallrye-maven-plugin/workflows/SmallRye%20Build/badge.svg?branch=master[link={ci}]
+image:https://github.com/smallrye/smallrye-maven-plugin/workflows/SmallRye%20Build/badge.svg?branch=main[link={ci}]
 image:https://img.shields.io/github/license/smallrye/smallrye-maven-plugin.svg["License", link="http://www.apache.org/licenses/LICENSE-2.0"]
 image:https://img.shields.io/maven-central/v/io.smallrye/smallrye-maven-plugin?color=green[]
 
